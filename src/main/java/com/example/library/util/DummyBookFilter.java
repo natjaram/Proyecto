@@ -18,10 +18,16 @@ public class DummyBookFilter {
     @PostConstruct
     public void init()
     {
-        bookService.addBook(new Book(null, "El señor de los anillos", "Libro completo de la trilogia", "J.R.R Tolkien", 500, 2));
+        bookService.addBook(new Book(null, "Cien años de soledad", "Libro de Realismo Magico", "Gabriel Garcia Marquez", 300, 2));
         try {Thread.sleep(100);} catch (InterruptedException e){}
-        bookService.addBook(new Book(null, "El Hobbit", "Libro del Hobbit", "J. R. R. Tolkien", 450, 1));
+        bookService.addBook(new Book(null, "Don Quijote de la mancha", "Libro de Ficcion", "Miguel de Cervantes", 250, 1));
         try {Thread.sleep(100);} catch (InterruptedException e){}
-        bookService.addBook(new Book(null, "Harry potter y la piedra filosofal", "Libro de Harry Potter", "J.K Rowling", 600, 3));
+        bookService.addBook(new Book(null, "El principito", "Libro de Literatura Infantil", "Antoine de Saint", 150, 3));
+        try {Thread.sleep(100);} catch (InterruptedException e){}
+        bookService.addBook(new Book(null, "La Odisea", "Libro de Epopeya", "Homero", 100, 2));
+        try {Thread.sleep(100);} catch (InterruptedException e){}
+        bookService.addBook(new Book(null, "Los Juegos del Hambre", "Libro de Ciencia Ficcion", "Suzanne Collins", 50, 1));
+        try {Thread.sleep(100);} catch (InterruptedException e){}
+        bookService.addBook(new Book(null, "En llamas", "Libro de Thriller", "Suzanne Collins", 150, 3));
     }
 }
