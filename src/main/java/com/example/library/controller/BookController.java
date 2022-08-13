@@ -25,14 +25,21 @@ public class BookController {
     }
 
     @GetMapping("")
-    public List<Book> getAll(@RequestParam(required = false) String authorId)
+    public List<Book> getAll(@RequestParam(required = false) String authorId , String titleid)
     {
-        if (authorId == null)
+        if (authorId == null && titleid == null)
         {
             return this.bookService.getAll();
-        } else {
+        }
+         else if (authorId != null)
+         {
             return this.bookService.findByAuthor(authorId);
         }
+        else 
+         {
+            return this.bookService.findByTitle(titleid);
+        }
+        
     }
 
     @GetMapping("/{bookId}")

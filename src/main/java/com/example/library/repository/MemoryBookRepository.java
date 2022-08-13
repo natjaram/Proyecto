@@ -39,6 +39,13 @@ public class MemoryBookRepository implements BookRepository {
     }
 
     @Override
+    public List<Book> findByTitle(String title) {
+        return booksMap.values().stream()
+            .filter(book -> book.getTitle().toLowerCase().indexOf(title.toLowerCase()) >= 0)
+            .collect(Collectors.toList());
+    }
+
+    @Override
     public Book save(Book book) {
         if (book.getBookId() == null)
         {

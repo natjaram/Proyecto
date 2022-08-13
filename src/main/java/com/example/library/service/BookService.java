@@ -30,6 +30,11 @@ public class BookService {
         return bookRepository.findByAuthor(authorId);
     }
 
+    public List<Book> findByTitle(String titleId)
+    {
+        return bookRepository.findByTitle(titleId);
+    }
+
     public Book addBook(Book book)
     {
         book.setBookId(null);
